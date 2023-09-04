@@ -29,6 +29,7 @@ public class Registration {
     @JoinColumn(name = "id_student", referencedColumnName = "id_student")
     private Student student;
 
-    @OneToMany(mappedBy = "registration",fetch = FetchType.EAGER)
+    //cascade = CascadeType.ALL me permite la inserción de las dos tablas
+    @OneToMany(mappedBy = "registration",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<RegistrationDetail> registrationDetail;
 }

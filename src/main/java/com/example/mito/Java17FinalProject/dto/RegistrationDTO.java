@@ -27,7 +27,8 @@ public class RegistrationDTO {
     @NotNull
     private StudentDTO student;
 
-    @NotNull
+
     @JsonManagedReference
+    @NotNull
     private List<RegistrationDetailDTO> registrationDetail;
 }
